@@ -2,36 +2,42 @@ form, input, label {
     border-radius: 25px;
     border-style: outset;
     padding: 5px ;
+    background-color: lightblue;
 }
 
 form {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    grid-gap: 5px;
     background-color:rgb(72, 61, 139);
+    max-width: 50%;
+    margin: auto;
 }
 
-input[type=button] {
+input[type=button]:hover {
     cursor: pointer;
-    background-color: lightblue;
+    background-color: springgreen;
 }
 
 label {
     text-align: right;
     background-color: white;
+    grid-column: 1 / 5;
 }
 
 /*
 Project objectives
-Build a single page site using HTML and CSS
-Manage a local git repository
+*Build a single page site using HTML and CSS
+*Manage a local git repository
 Host a project on GitHub pages
+
 Project requirement
 Make a minimum of six commits.
 Host site on GitHub pages
-Use an external CSS stylesheet for styling
+*Use an external CSS stylesheet for styling 
 Use a grid-based layout for the calculator. Do not use table elements.
 Center the calculator on the page NEW
-When hovering over a button, the cursor should change to a hand rather than an arrow NEW
-When hovering over a button, the button should change color
-Must include an <input> element. *<form> and <label> elements are not required.
+*When hovering over a button, the cursor should change to a hand rather than an arrow NEW
+*When hovering over a button, the button should change color
+*Must include an <input> element. *<form> and <label> elements are not required.
 */
