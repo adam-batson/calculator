@@ -1,0 +1,20 @@
+form {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    background-color:rgb(72, 61, 139);
+}
+
+form, input, label {
+    border-radius: 25px;
+    border-style: outset;
+}
+
+input {
+    background-color: lightblue;
+}
+
+#text {
+    text-align: right;
+    background-color: white;
+}
