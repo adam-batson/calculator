@@ -1,15 +1,19 @@
 html, body {
     height: 100%;
     overflow: hidden;
+    background-color: black;
+    /* Hides the scrollbar to keep calculator centered vertically
+       and allows for positioning of the form. */
 }
-
 form, input, button {
     border-radius: 25px;
     border-style: outset;
     padding: 5px ;
     background-color: white;
+    /* Rounds the form, textbox, and button corners.
+       Changes the border to outset style.
+       Adds padding and changes background to white. */
 }
-
 form {
     position: relative;
     top: 50%;
@@ -20,30 +24,37 @@ form {
     background-color: lightblue;
     width: 50%;
     margin: auto;
+    /* Positions form at vertical and horizontal center of the page.
+       Sets calculator to use grid layout with gaps between elements.
+       Sets background color to light blue for the calculator "body" only. */
 }
 button {
     padding: 10px;
 }
-
 button:hover {
     cursor: pointer;
     background-color: gray;
+    /* When hovering over a button:
+        Changes the cursor to a pointing hand.
+        Changes the button background color to gray. */
 }
-
 button:active { 
     animation-name: flash;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
     box-shadow: inset 0px 0px 5px rgb(10, 16, 29);
+    /* Adds a lighting flash animation that plays when button is clicked.
+       Animation will play until the end or until click is no longer held.
+       Adds a shadow to the edge of the button to simulate the apperance
+       of being pressed. */
 }
-
 input {
     text-align: right;
-    background-color: white;
     grid-column: 1 / 5;
+    /* Aligns text in the textbox to the right, like a calculator.
+       Lengthens textbox to cover the top row, like a calculator. */
 }
-
 @keyframes flash {
     0% {
         color: white;
@@ -65,21 +76,5 @@ input {
         color: white;
         background-color: #000033;
     }
+    /* Creates lightning flash animation */
 }
-
-/*
-Project objectives
-*Build a single page site using HTML and CSS
-*Manage a local git repository
-Host a project on GitHub pages
-
-Project requirement
-Make a minimum of six commits.
-Host site on GitHub pages
-*Use an external CSS stylesheet for styling 
-*Use a grid-based layout for the calculator. Do not use table elements.
-*Center the calculator on the page 
-*When hovering over a button, the cursor should change to a hand rather than an arrow
-*When hovering over a button, the button should change color
-*Must include an <input> element. *<form> and <label> elements are not required.
-*/
