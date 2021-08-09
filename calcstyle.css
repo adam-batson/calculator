@@ -6,13 +6,17 @@ html, body {
        and allows for positioning of the form. */
 }
 form, input, button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
     border-radius: 25px;
     border-style: outset;
     padding: 5px ;
     background-color: white;
     /* Rounds the form, textbox, and button corners.
        Changes the border to outset style.
-       Adds padding and changes background to white. */
+       Adds padding and changes background to white.
+       Sets font, increases font size and boldness. */
 }
 form {
     position: relative;
