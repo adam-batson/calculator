@@ -7,12 +7,12 @@ html, body {
 }
 form, input, button {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    font-weight: bold;
+    font-size: xx-large;
+    font-weight: bolder;
     border-radius: 25px;
     border-style: outset;
     padding: 5px ;
-    background-color: white;
+    background-color: #effcff;
     /* Rounds the form, textbox, and button corners.
        Changes the border to outset style.
        Adds padding and changes background to white.
@@ -26,7 +26,7 @@ form {
     grid-template-columns: auto auto auto auto;
     grid-gap: 5px;
     background-color: lightblue;
-    width: 50%;
+    width: 30%;
     margin: auto;
     /* Positions form at vertical and horizontal center of the page.
        Sets calculator to use grid layout with gaps between elements.
@@ -56,14 +56,21 @@ button:active {
 input {
     text-align: right;
     grid-column: 1 / 5;
+    font-family: monospace;
     /* Aligns text in the textbox to the right, like a calculator.
        Lengthens textbox to cover the top row, like a calculator. */
 }
 .numeral {
-    font-weight: normal;
+    font-weight: bold;
+    font-size: large;
+    /* Sets numerals to be less bold and smaller than operators and textbox */
 }
 .operator {
-    font-weight: bolder;
+    font-size: xx-large;
+    color: gray;
+}
+.operator:hover {
+    color: white;
 }
 @keyframes flash {
     0% {
