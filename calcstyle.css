@@ -59,6 +59,12 @@ input {
     /* Aligns text in the textbox to the right, like a calculator.
        Lengthens textbox to cover the top row, like a calculator. */
 }
+.numeral {
+    font-weight: normal;
+}
+.operator {
+    font-weight: bolder;
+}
 @keyframes flash {
     0% {
         color: white;
