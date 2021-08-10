@@ -63,14 +63,16 @@ input {
 .numeral {
     font-weight: bold;
     font-size: large;
-    /* Sets numerals to be less bold and smaller than operators and textbox */
+    /* Sets numerals to be less bold and smaller than operators and textbox. */
 }
 .operator {
-    font-size: xx-large;
     color: gray;
+    /* Sets operators to have gray font. */
 }
 .operator:hover {
     color: white;
+    /* Sets operator color to white on hover to maintain readability as hovering
+       will make the button turn gray. */
 }
 @keyframes flash {
     0% {
