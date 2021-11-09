@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
+  text-align: center;
   background-color: black;
   /* Hides the scrollbar to keep calculator centered vertically
        and allows for positioning of the form. */
@@ -24,8 +24,8 @@ button {
 }
 form {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10%;
+  transform: translateY(-50px);
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 5px;
@@ -47,14 +47,8 @@ button:hover {
         Changes the button background color to gray. */
 }
 button:active {
-  animation-name: flash;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-out;
   box-shadow: inset 0px 0px 5px rgb(10, 16, 29);
-  /* Adds a lighting flash animation that plays when button is clicked.
-       Animation will play until the end or until click is no longer held.
-       Adds a shadow to the edge of the button to simulate the apperance
+  /* Adds a shadow to the edge of the button to simulate the apperance
        of being pressed. */
 }
 input,
@@ -64,6 +58,40 @@ label {
   font-family: monospace;
   /* Aligns text in the textbox to the right, like a calculator.
        Lengthens textbox to cover the top row, like a calculator. */
+}
+h1,
+h3,
+p,
+ol,
+ul {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+}
+ol,
+ul {
+  padding: 10px;
+  margin: auto;
+  max-width: 50%;
+}
+li {
+  text-align: left;
+}
+a:link {
+  color: lightblue;
+}
+a:visited {
+  color: rgb(172, 103, 236);
+}
+#github-link:hover {
+  animation-name: flash;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  /* Adds a lighting flash animation that plays when hovering over the link. */
+}
+#total {
+  background-color: lightgoldenrodyellow;
 }
 .numeral {
   font-weight: bold;
@@ -81,24 +109,19 @@ label {
 }
 @keyframes flash {
   0% {
-    color: white;
-    background-color: black;
+    color: black;
   }
   5% {
-    color: black;
-    background-color: #9999dd;
+    color: #9999dd;
   }
   10% {
-    color: white;
-    background-color: black;
+    color: black;
   }
   12% {
-    color: black;
-    background-color: #ccccff;
+    color: #ccccff;
   }
   100% {
-    color: white;
-    background-color: #000033;
+    color: #000033;
   }
   /* Creates lightning flash animation */
 }
