@@ -1,99 +1,104 @@
-html, body {
-    height: 100%;
-    overflow: hidden;
-    background-color: black;
-    /* Hides the scrollbar to keep calculator centered vertically
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+  /* Hides the scrollbar to keep calculator centered vertically
        and allows for positioning of the form. */
 }
-form, input, button {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
-    font-weight: bolder;
-    border-radius: 25px;
-    border-style: outset;
-    padding: 5px ;
-    background-color: #effcff;
-    /* Rounds the form, textbox, and button corners.
+form,
+input,
+label,
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
+  font-weight: bolder;
+  border-radius: 25px;
+  border-style: outset;
+  padding: 5px;
+  background-color: #effcff;
+  /* Rounds the form, textbox, and button corners.
        Changes the border to outset style.
        Adds padding and changes background to white.
        Sets font, increases font size and boldness. */
 }
 form {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 5px;
-    background-color: lightblue;
-    width: 30%;
-    margin: auto;
-    /* Positions form at vertical and horizontal center of the page.
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 5px;
+  background-color: lightblue;
+  width: 30%;
+  margin: auto;
+  /* Positions form at vertical and horizontal center of the page.
        Sets calculator to use grid layout with gaps between elements.
        Sets background color to light blue for the calculator "body" only. */
 }
 button {
-    padding: 10px;
+  padding: 10px;
 }
 button:hover {
-    cursor: pointer;
-    background-color: gray;
-    /* When hovering over a button:
+  cursor: pointer;
+  background-color: gray;
+  /* When hovering over a button:
         Changes the cursor to a pointing hand.
         Changes the button background color to gray. */
 }
-button:active { 
-    animation-name: flash;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
-    box-shadow: inset 0px 0px 5px rgb(10, 16, 29);
-    /* Adds a lighting flash animation that plays when button is clicked.
+button:active {
+  animation-name: flash;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  box-shadow: inset 0px 0px 5px rgb(10, 16, 29);
+  /* Adds a lighting flash animation that plays when button is clicked.
        Animation will play until the end or until click is no longer held.
        Adds a shadow to the edge of the button to simulate the apperance
        of being pressed. */
 }
-input {
-    text-align: right;
-    grid-column: 1 / 5;
-    font-family: monospace;
-    /* Aligns text in the textbox to the right, like a calculator.
+input,
+label {
+  text-align: right;
+  grid-column: 1 / 5;
+  font-family: monospace;
+  /* Aligns text in the textbox to the right, like a calculator.
        Lengthens textbox to cover the top row, like a calculator. */
 }
 .numeral {
-    font-weight: bold;
-    font-size: large;
-    /* Sets numerals to be less bold and smaller than operators and textbox. */
+  font-weight: bold;
+  font-size: large;
+  /* Sets numerals to be less bold and smaller than operators and textbox. */
 }
 .operator {
-    color: gray;
-    /* Sets operators to have gray font. */
+  color: gray;
+  /* Sets operators to have gray font. */
 }
 .operator:hover {
-    color: white;
-    /* Sets operator color to white on hover to maintain readability as hovering
+  color: white;
+  /* Sets operator color to white on hover to maintain readability as hovering
        will make the button turn gray. */
 }
 @keyframes flash {
-    0% {
-        color: white;
-        background-color: black;
-    }
-    5% {
-        color: black;
-        background-color: #9999DD;
-    }
-    10% {
-        color: white;
-        background-color: black;
-    }
-    12% { 
-        color: black;
-        background-color: #CCCCFF;
-    }
-    100% {
-        color: white;
-        background-color: #000033;
-    }
-    /* Creates lightning flash animation */
+  0% {
+    color: white;
+    background-color: black;
+  }
+  5% {
+    color: black;
+    background-color: #9999dd;
+  }
+  10% {
+    color: white;
+    background-color: black;
+  }
+  12% {
+    color: black;
+    background-color: #ccccff;
+  }
+  100% {
+    color: white;
+    background-color: #000033;
+  }
+  /* Creates lightning flash animation */
 }

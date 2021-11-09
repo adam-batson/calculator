@@ -6,25 +6,33 @@
         <title>Adam Batson's Calculator</title>
         <meta name="author" content="Adam Batson">
     </head>
-    <form>
-        <!-- Sets up the textbox at the top followed by buttons.
-             Sets button layout to look like a handheld calculator. -->
-        <input type="text" value="0">
-        <button type="button" class="numeral" value="1">1</button>
-        <button type="button" class="numeral" value="2">2</button>
-        <button type="button" class="numeral" value="3">3</button>
-        <button type="button" class="operator" value="+">+</button>
-        <button type="button" class="numeral" value="4">4</button>
-        <button type="button" class="numeral" value="5">5</button>
-        <button type="button" class="numeral" value="6">6</button>
-        <button type="button" class="operator" value="-">-</button>
-        <button type="button" class="numeral" value="7">7</button>
-        <button type="button" class="numeral" value="8">8</button>
-        <button type="button" class="numeral" value="9">9</button>
-        <button type="button" class="operator" value="x">x</button>
-        <button type="button" class="operator" value=".">.</button>
-        <button type="button" class="numeral" value="0">0</button>
-        <button type="button" class="operator" value="=">=</button>
-        <button type="button" class="operator" value="\">\</button>
-    </form>
+    <body>
+        <form>
+            <!-- Sets up the textbox at the top followed by buttons.
+                 Sets button layout to look like a handheld calculator. -->
+            <label id="history">0</label>
+            <input type="text" id="total" value="0">
+            <button type="button" class="operator" id="negative">+/-</button>
+            <button type="button" class="operator" id="sqrt">&nbsp;&radic;&nbsp;</button>
+            <button type="button" class="operator" id="square">x<sup>2</sup></button>
+            <button type="button" class="operator" id="clear">C</button>
+            <button type="button" class="numeral" value="1">1</button>
+            <button type="button" class="numeral" value="2">2</button>
+            <button type="button" class="numeral" value="3">3</button>
+            <button type="button" class="operator" id="add" value="+">+</button>
+            <button type="button" class="numeral" value="4">4</button>
+            <button type="button" class="numeral" value="5">5</button>
+            <button type="button" class="numeral" value="6">6</button>
+            <button type="button" class="operator" id="subtract" value="-">-</button>
+            <button type="button" class="numeral" value="7">7</button>
+            <button type="button" class="numeral" value="8">8</button>
+            <button type="button" class="numeral" value="9">9</button>
+            <button type="button" class="operator" id="multiply" value="x">x</button>
+            <button type="button" class="numeral" id="decimal" value=".">.</button>
+            <button type="button" class="numeral" value="0">0</button>
+            <button type="button" class="operator" id="equals" value="=">=</button>
+            <button type="button" class="operator" id="divide" value="/">/</button>
+        </form>
+    </body>
+    <script src="script.js" defer></script>
 </html>
