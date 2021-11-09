@@ -1,17 +1,17 @@
 (() => {
     // Elements
-    var numbers = document.getElementsByClassName('numeral');
-    var equals = document.getElementById('equals');
-    var add = document.getElementById('add');
-    var subtract = document.getElementById('subtract');
-    var multiply = document.getElementById('multiply');
-    var divide = document.getElementById('divide');
-    var total = document.getElementById('total');
-    var negative = document.getElementById('negative');
-    var sqrt = document.getElementById('sqrt');
-    var square = document.getElementById('square');
-    var clear = document.getElementById('clear');
-    var label = document.getElementById('history'); // This is used so the user knows the last number input when an operator is clicked.
+    let numbers = document.getElementsByClassName('numeral');
+    let equals = document.getElementById('equals');
+    let add = document.getElementById('add');
+    let subtract = document.getElementById('subtract');
+    let multiply = document.getElementById('multiply');
+    let divide = document.getElementById('divide');
+    let total = document.getElementById('total');
+    let negative = document.getElementById('negative');
+    let sqrt = document.getElementById('sqrt');
+    let square = document.getElementById('square');
+    let clear = document.getElementById('clear');
+    let label = document.getElementById('history'); // This is used so the user knows the last number input when an operator is clicked.
 
     //Classes
     class Calculator {
@@ -98,7 +98,7 @@
     var calc = new Calculator();
 
     //EventListeners
-    for(var i = 0; i < numbers.length; i++) {
+    for(let i = 0; i < numbers.length; i++) {
         numbers[i].addEventListener('click', function() {
             calc.addToTotal(this.innerText);
         });
