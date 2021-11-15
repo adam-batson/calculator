@@ -26,7 +26,13 @@
                 this.clear();
                 this.operation = "None";
             }
-            total.value = total.value * 10 + parseInt(number); // Appends each number input to the end rather than overwriting the last input.
+            if(total.value == 0) {
+                total.value = parseFloat(number); // Appends each number input to the end rather than overwriting the last input.
+            } else if (number == ".") {
+                total.value += ".";
+            } else {
+                total.value = total.value + parseFloat(number); // Appends each number input to the end rather than overwriting the last input.
+            }
         }
         
         equals() {
@@ -64,30 +70,36 @@
             total.value = 0;
             this.operation = "-";
         }
+
         multiply() {
             this.temp = total.value;
             label.innerText = this.temp + " * ";
             total.value = 0;
             this.operation = "*";
         }
+
         divide() {
             this.temp = total.value;
             label.innerText = this.temp + " / ";
             total.value = 0;
             this.operation = "/";
         }
+
         negative() {
             label.innerText = "-(" + total.value + ")";
             total.value = -parseFloat(total.value);
         }
+
         sqrt() {
             label.innerText = "\u221A" + total.value; // \u221A is the sqrt symbol
             total.value = Math.sqrt(total.value);
         }
+
         square() {
             label.innerText = total.value + " * " + total.value;
             total.value = Math.pow(total.value, 2);
         }
+
         clear() { // Resets values and displays to zero.
             total.value = 0;
             this.temp = 0;
